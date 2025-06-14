@@ -14,7 +14,8 @@ function findPivot(arr, first, last) { // O(n)
         // Decrement j if current element is greater than pivot element
         while (arr[j] > pivot && j >= first) j--;
 
-        // When i and j stop
+        // When i and j stop, puts large numbers to the right, and small ones to the left of the pivot before they cross.
+        //Once they cross, we stop and place the pivot in the middle.
         if (i < j) {
             swap(arr, i, j);
         }
